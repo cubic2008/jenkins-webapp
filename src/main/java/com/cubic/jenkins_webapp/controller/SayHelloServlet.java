@@ -30,7 +30,7 @@ public class SayHelloServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		response.getWriter()
 		.append("<html><head><title>Hello</title</head><body><h1>")
-		.append(name)
+		.append("Hello, " + name)
 		.append("</h1></body></html>");
 	}
 
