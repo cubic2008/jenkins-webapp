@@ -31,7 +31,6 @@ public class SayHelloServlet extends HttpServlet {
 		response.getWriter()
 		.append("<html><head><title>Hello</title</head><body><h1>")
 		.append("Hello, " + name)
-		.append("<br/>How are you today?")
 		.append("</h1></body></html>");
 	}
 
