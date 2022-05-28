@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cubic.jenkins_webapp.services.AppServiceImpl;
+
 /**
  * Servlet implementation class SayHelloServlet
  */
@@ -30,8 +32,9 @@ public class SayHelloServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		response.getWriter()
 		.append("<html><head><title>Hello</title</head><body><h1>")
-		.append("Hello, " + name + ".<br/>")
-		.append("How are you?")
+//		.append("Hello, " + name + ".<br/>")
+//		.append("How are you?")
+		.append( AppServiceImpl.getInstance().getGreeting(name))
 		.append("</h1></body></html>");
 	}
 
